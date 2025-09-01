@@ -27,6 +27,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\LogAfterRequest::class,
         \App\Http\Middleware\ForceJsonResponse::class,
         \App\Http\Middleware\Cors::class,
+        \App\Http\Middleware\RequestIdMiddleware::class,
    
     ];
 

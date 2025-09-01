@@ -20,19 +20,19 @@
        
             @switch( config('app.sigla') )
                 @case('MAF')
-                    Caixa de Crédito Agrícola de Mafra - BdP - PLCP
+                    Caixa de Crédito Agrícola de Mafra - SIBS API Merchant TESTES
                     @break
                 @case('TVD')
-                    Caixa de Crédito Agrícola de Torres Vedras - BdP - PLCP
+                    Caixa de Crédito Agrícola de Torres Vedras - SIBS API Merchant TESTES
                     @break
                 @case('CHM')
-                    Caixa de Crédito Agrícola da Chamusca - BdP - PLCP
+                    Caixa de Crédito Agrícola da Chamusca - SIBS API Merchant  TESTES
                     @break
                 @case('BOM')
-                    Caixa de Crédito Agrícola do Bombarral - BdP - PLCP
+                    Caixa de Crédito Agrícola do Bombarral - SIBS API Merchant TESTES
                     @break
                 @default
-                    Caixa de Crédito Agrícola  - BdP - PLCP
+                    Caixa de Crédito Agrícola  - SIBS API Merchant TESTES
             @endswitch 
 
         </div>

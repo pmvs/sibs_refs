@@ -1,9 +1,0 @@
-4.1|Consulta IBAN - Cliente Particular - Nº telemóvel nacional|{pspcode}|{telemovelnacional}|
-4.2|Consulta IBAN - Cliente Particular - Nº telemóvel internacional|{pspcode}|{telemovelinternacional}|
-4.3|Consulta IBAN - Cliente Particular - Nº telemóvel não aderente|{pspcode}|{naoassociado}|
-4.4|Consulta IBAN - Cliente Empresa - NIPC nacional|{pspcode}|{fiscalnumberempresa}|
-4.5|Consulta IBAN - Cliente Empresa - NIPC não aderente|{pspcode}|{fiscalnumberempresanaoaderente}|
-4.6|Consulta IBAN - Sem Customer Identifier|{pspcode}||
-4.7|Consulta IBAN - Sem código PSP||{telemovelnacional}|
-4.8|Consulta IBAN - Sem Timestamp|{pspcode}|{telemovelnacional}|
-4.9|Consulta IBAN - Timestamp do pedido > Timestamp do sistema|{pspcode}|{telemovelnacional}|
