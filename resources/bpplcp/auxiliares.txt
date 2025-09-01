@@ -1,0 +1,15 @@
+Route::middleware(['domainnew:bpnetsvc-ccbom-cert.bportugal.pt'])->group(function () {
+    Route::get('/test', function (Request $request) {
+        return response()->json(['message' => 'Welcome to plqual API']);
+    });
+});
+
+
+Route::middleware(['domainnew:vop-cert.bportugal.pt'])->group(function () {
+    Route::group(['namespace'=>'api', 'prefix' => 'vop'], function() {
+        Route::get('/test', function (Request $request) {
+            return response()->json(['message' => 'Welcome to vop-cert API']);
+        });
+        Route::get('/health',  [ \App\Http\Controllers\Api\VopApi::class, 'getHealth'])->middleware('json.response');
+    });
+});

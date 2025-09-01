@@ -1,0 +1,12 @@
+8.1|Consulta do nome 1º titular - Cliente particular - Transferência interbancária|{pspcode}|{pspcodeother}|{ibanother}|
+8.2|Consulta do nome 1º titular - Cliente particular - Transferência intrabancária|{pspcode}|{pspcode}|{ibanparticular}|
+8.3|Consulta do nome 1º titular - Cliente Empresa (Nome 1º titular)|{pspcode}|{pspcode}|{ibanempresa}|
+8.4|Consulta do nome 1º titular - Cliente Empresa (Nome 1º titular + Comercial)|{pspcode}|{pspcodeother}|{ibanempresa3}|
+8.5|Consulta do nome 1º titular - IBAN diferente do PSP code destino|{pspcode}|{pspcodeother}|{ibanparticular}|
+8.6|Consulta do nome 1º titular - PSP code destino inválido|{pspcode}|{pspcodeinvalido}|{ibanparticular}|
+8.7|Consulta do nome 1º titular - sem informação do PSP destino|{pspcode}||{ibanparticular}|
+8.8|Consulta do nome 1º titular - sem informação do PSP origem||{pspcode}|{ibanparticular}|
+8.9|Consulta do nome 1º titular - sem IBAN|{pspcode}|{pspcodeother}||
+8.10|Consulta do nome 1º titular - sem timestamp|{pspcode}|{pspcodeother}|{ibanother}|
+8.11|Consulta do nome 1º titular - Timeout na comunicação com o PSP destino|{pspcode}|{pspcodeother}|{ibanother}|
+8.12|Consulta do nome 1º titular - endpoint do PSP destino inválido|{pspcode}|{pspcodeother}|{ibanother}|

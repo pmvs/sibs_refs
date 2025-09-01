@@ -1,0 +1,9 @@
+3.1|Consulta lista aderentes com sucesso|5200|+351964522708;+351964522706|
+3.2|Consulta lista aderentes - nenhum contacto aderente|5200|+351964522709;351964522707|
+3.3|Consulta lista aderentes - lista contactos vazia|5200||
+3.4|Consulta lista aderentes - Sem código PSP||+351964522708|
+3.5|Consulta lista aderentes - Sem timestamp|5200|+351964522708|
+3.6|Consulta lista aderentes - Timestamp do pedido > Timestamp do sistema|5200|+351964522708|
+3.7|Consulta lista aderentes - lista de contactos excede o limite de contactos|5200||
+3.8|Consulta lista aderentes - lista de contactos igual ao limite de contactos|5200||
+

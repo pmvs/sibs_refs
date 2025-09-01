@@ -1,0 +1,31 @@
+1.1|Associação - Cliente Particular - Nº telemóvel nacional|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.2|Associação - Cliente Particular - Nº telemóvel internacional|{pspcode}|{telemovelinternacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.3|Associação - Cliente Particular - Nº telemóvel inválido|{pspcode}|{telemovelnacionalinvalido}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.4|Associação - Cliente Particular - Nº telemóvel sem indicativo|{pspcode}|{telemovelnacionalsemindicativo}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.5|Associação - Cliente Particular - sem Nº telemóvel|{pspcode}||1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.6|Associação - Cliente Particular - NIF inválido|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticularinvalido}|1|{ibanparticular}||
+1.7|Associação - Cliente Particular - NIPC cliente empresa|{pspcode}|{telemovelnacional}|1|{fiscalnumberempresa}|1|{ibanparticular}||
+1.8|Associação - Cliente Particular - Customer identifier type = NIPC|{pspcode}|{telemovelnacional}|2|{fiscalnumberparticular}|1|{ibanparticular}||
+1.9|Associação - Cliente Particular - sem Customer identifier type|{pspcode}|{telemovelnacional}||{fiscalnumberparticular}|1|{ibanparticular}||
+1.10|Associação - Cliente Particular - criar associação duplicada|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.11|Associação - Cliente Particular - criar associação duplicada - NIF diferente|{pspcode}|{telemovelnacional}|1|PT144441578|1|{ibanparticular}||
+1.12|Associação - Cliente Particular - criar associação duplicada - Nº telemóvel diferente|{pspcode}|{telemovelnacionalparticular}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.13|Associação - Cliente Empresa - NIPC nacional|{pspcode}|{fiscalnumberempresa}|2|{fiscalnumberempresa}|2|{ibanempresa}||
+1.14|Associação - Cliente Empresa - NIPC inválido|{pspcode}|{fiscalnumberempresainvalido}|2|{fiscalnumberempresa}|2|{ibanempresa}||
+1.15|Associação - Cliente Empresa - NIF cliente particular|{pspcode}|{fiscalnumberempresa}|2|{fiscalnumberparticular}|2|{ibanempresa}||
+1.16|Associação - Cliente Empresa - Sem NIPC|{pspcode}|{fiscalnumberempresa}|2||2|{ibanempresa}||
+1.17|Associação - Cliente Empresa - Customer identifier type = Telemóvel|{pspcode}|{fiscalnumberempresa}|1|{fiscalnumberempresa}|2|{ibanempresa}||
+1.18|Associação - Cliente Empresa - sem Customer identifier type|{pspcode}|{fiscalnumberempresa}||{fiscalnumberempresa}|2|{ibanempresa}||
+1.19|Associação - Cliente Empresa - Criar associação duplicada|{pspcode}|{fiscalnumberempresa}|2|{fiscalnumberempresa}|2|{ibanempresa}||
+1.20|Associação - Sem IBAN|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|||
+1.21|Associação - IBAN inválido|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticularinvalido}||
+1.22|Associação - Sem NIF|{pspcode}|{telemovelnacional}|1||1|{ibanparticular}||
+1.23|Associação - Sem timestamp|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.24|Associação - Timestamp do pedido > Timestamp do sistema|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.25|Associação - Código PSP diferente do IBAN|{pspcodediferenteiban}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.26|Associação - Sem código PSP||{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.27|Associação - Código PSP inválido|{pspcodeinvalido}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanparticular}||
+1.28|Associação - Sem dados na requisição||||||||
+1.29|Associação - Cliente particular - Criar nova associação para Nº telemóvel com associação ativa - IBAN diferente|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticular}|1|{ibanempresa}||
+1.30|Associação - Cliente particular - Criar nova associação para Nº telemóvel com associação ativa - NIF e IBAN diferente|{pspcode}|{telemovelnacional}|1|{fiscalnumberparticularother}|1|||
+1.31|Associação - Cliente empresa - Criar nova associação para NIPC com associação ativa - IBAN diferente|{pspcode}|{fiscalnumberempresa}|2|{fiscalnumberempresa}|2|{ibanempresa}||
