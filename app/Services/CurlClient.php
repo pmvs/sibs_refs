@@ -8,6 +8,9 @@ class CurlClient
 {
     public function request(string $method, string $url, array $opts = []): array
     {
+
+        \Log::info('CurlClient:request');
+          
         $start   = microtime(true);
         $method  = strtoupper($method);
         $headers = $opts['headers'] ?? [];
@@ -16,6 +19,8 @@ class CurlClient
         $timeout = (int)($opts['timeout'] ?? config('net.req_t',4));
         $connect = (int)($opts['connect_timeout'] ?? config('net.con_t',2));
         $retries = (int)($opts['retries'] ?? 1);
+        $storageDir = storage_path('app/curlerrproxy-'. date('Y-md').'txt');
+        $fp = fopen($storageDir, 'a+');
 
         if ($query) {
             $url .= (str_contains($url,'?')?'&':'?').http_build_query($query);
@@ -24,16 +29,26 @@ class CurlClient
         $curlHeaders = [];
         foreach ($headers as $k => $v) $curlHeaders[] = $k . ': ' . $v;
 
+        \Log::info('CurlClient:request headers: ' . print_r( $curlHeaders , true));
+        \Log::info('CurlClient:url: ' . $url);
+
         $attempt = 0;
         $respHeaders = []; $response = null; $err = null; $status = 0;
 
         do {
+
             $attempt++;
             $respHeaders = [];
+
             $ch = curl_init($url);
+
             curl_setopt_array($ch, [
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_CUSTOMREQUEST  => $method,
+                CURLOPT_VERBOSE => true,
+                CURLOPT_STDERR =>  $fp,
+                CURLOPT_SSL_VERIFYPEER => 0,
+                //CURLOPT_HEADER => true,   
                 CURLOPT_HTTPHEADER     => $curlHeaders,
                 CURLOPT_TIMEOUT        => $timeout,
                 CURLOPT_CONNECTTIMEOUT => $connect,

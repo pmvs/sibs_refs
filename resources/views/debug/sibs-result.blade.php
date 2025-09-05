@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('layouts.plain')
+@section('title','Resultado SIBS')
 @section('content')
 <div class="container" style="max-width:720px">
   <h1>Resultado da Consulta SIBS</h1>

@@ -10,18 +10,45 @@ class SibsGetNamesService
 
     public function getNames(string $entity, string $reference): array
     {
+
+        \Log::info('SibsGetNamesService:getNames');
+        \Log::info('Entidade ' . $entity);
+        \Log::info('Referencia ' . $reference);
+
         $base = $this->aff->apply(rtrim(config('net.sibs_base'), '/'));
+        \Log::info('Base URL ' . $base);
+
         $ver  = config('net.sibs_ver','v1');
+        \Log::info('Versão ' . $ver);
+
         $url  = sprintf('%s/sibs/%s/payment-owners/%s/%s', $base, $ver, $entity, $reference);
+
+
+//         $base='https://site3.sibsapimarket.com'; $ver='v1';
+// $entity='21561'; $reference='420729673'; $clientId='771c5566-2d4c-449c-86f8-38564d080b44';
+        $sec='aI2tK1vL3fG4gB5rV7qY4pI4wH2fY8mA8hP2nJ2hC1yM5kB8rY';
+// $paths=["/sibs-qly/apimarket/sibs/$ver/payment-owners/$entity/$reference"];
+
+
+
+        \Log::info('URL ' . $url);
 
         $headers = [
             'Accept'          => 'application/json',
             'x-ibm-client-id' => config('net.sibs_id'),
+            // 'x-ibm-secret-id' => config('net.sibs_secret_id'),
             'X-Message-ID'    => $this->msgId14(),
         ];
         if ($b = config('net.bearer')) {
             $headers['Authorization'] = 'Bearer '.$b; // normalmente não precisa nesta operação
         }
+        // se o product usa api key com secret em header:
+        // if ($sec = config('net.sibs_secret_id')) {
+        //     $headers['x-ibm-client-secret'] = $sec;
+        // }
+
+       // $basic = base64_encode(config('net.sibs_id') . ':' . config('net.sibs_secret_id'));
+        //$headers['Authorization'] = 'Basic ' . $basic;
 
         Log::info('sibs.getnames.request', [
             'entity' => $entity, 'reference' => $reference,
@@ -29,6 +56,8 @@ class SibsGetNamesService
         ]);
 
         $resp = $this->http->request('GET', $url, ['headers' => $headers, 'retries' => 2]);
+
+        Log::info('sibs.getnames.resp'. print_r($resp, true));
 
         $this->aff->rememberFrom($resp['headers']);
 

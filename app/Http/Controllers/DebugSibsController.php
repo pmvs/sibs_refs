@@ -9,11 +9,15 @@ class DebugSibsController extends Controller
 {
     public function form()
     {
+        \Log::info('---View form SIBS----');
+        
         return view('debug.sibs-form');
     }
 
     public function submit(Request $request, SibsGetNamesService $svc)
     {
+        \Log::info('---Post form SIBS----');
+
         $data = $request->validate([
             'entity'    => ['required','regex:/^\d+$/','max:5'],
             'reference' => ['required','regex:/^\d+$/','max:15'],
