@@ -17,23 +17,31 @@
     </head>
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-       
-            @switch( config('app.sigla') )
+            
+            @php
+                $isProduction = config('app.env') === 'prod';
+                $suffix = $isProduction ? '' : ' TESTES';
+            @endphp
+
+            @switch(config('app.sigla'))
                 @case('MAF')
-                    Caixa de Crédito Agrícola de Mafra - SIBS API Merchant TESTES
+                    Caixa de Crédito Agrícola de Mafra - SIBS API Merchant{{ $suffix }}
                     @break
                 @case('TVD')
-                    Caixa de Crédito Agrícola de Torres Vedras - SIBS API Merchant TESTES
+                    Caixa de Crédito Agrícola de Torres Vedras - SIBS API Merchant{{ $suffix }}
                     @break
                 @case('CHM')
-                    Caixa de Crédito Agrícola da Chamusca - SIBS API Merchant  TESTES
+                    Caixa de Crédito Agrícola da Chamusca - SIBS API Merchant{{ $suffix }}
                     @break
                 @case('BOM')
-                    Caixa de Crédito Agrícola do Bombarral - SIBS API Merchant TESTES
+                    Caixa de Crédito Agrícola do Bombarral - SIBS API Merchant{{ $suffix }}
                     @break
                 @default
-                    Caixa de Crédito Agrícola  - SIBS API Merchant TESTES
-            @endswitch 
+                    Caixa de Crédito Agrícola - SIBS API Merchant{{ $suffix }}
+            @endswitch
+
+            
+           
 
         </div>
     </body>
